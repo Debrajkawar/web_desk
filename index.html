@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio Devraj Kunwar, web developer.">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="devraj.css">
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="dek">
+    <header>
+        <div class="logo"><img src="dlogo1.png"width="25"></div>
+        <div class="menu-toggle" onclick="toggleMenu()" id="toggleButton">☰</div>
+        <nav class="dropdown-menu" id="dropdownMenu">
+        <div class="home-icon">
+            <i class="fas fa-home"></i>
+        </div>
+        <ul class="navlink">
+            <li><a href="index.html">Home <span>&#8250;</span></a></li>
+            <li><a href="#about">About <span>&#8250;</span></a></li>
+            <li><a href="pages.html">Pages <span>&#8250;</span></a></li>
+            <li><a href="services.html">Services <span>&#8250;</span></a></li>
+            <li><a href="#contact">Contact <span>&#8250;</span></a></li>
+        </ul>
+    </nav>
+    </header>
+    <script>
+        function toggleMenu() {
+          const menu = document.getElementById('dropdownMenu');
+          const toggleButton = document.getElementById('toggleButton');
+      
+          menu.classList.toggle('show');
+      
+          // Swap icons based on menu state
+          const isOpen = menu.classList.contains('show');
+          toggleButton.innerHTML = isOpen
+            ? '<i class="fas fa-times"></i>'  // × icon
+            : '<i class="fas fa-bars"></i>';  // ☰ icon
+        }
+      </script>
+      
+    <div class="hero">
+    <div class="dev">
+        <h3>Hello, It's Me </h3>
+        <h1>Devraj Kunwar</h1>
+        <h3>And I'm a <span class="text"></span></h3>
+    </div>
+    <script src="mm.js"></script>
+</div>
+    <!-- <div class="footer">&copy; 2025 My Website</div> -->
+    <!-- <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script> -->
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("loader");
+        const dek = document.getElementById("dek")
+      // Simulate loading delay for demonstration purposes
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+        dek.style.display = "block";
+      }, 3000); // Adjust time as needed
+    });</script>
+    <div class="container" id="about">
+        <div class="profile">
+        <img src="dsb.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+        <div class="about">
+        <h1>About me.</h1>
+        <p>
+            Hi, I'm Devraj Kuwar, a student at Rapti Engineering College. I am from Salyan, but currently,
+            I reside in Ghorahi. I'm excited to share my experiences and connect with like-minded individuals.
+            As a student at Rapti Engineering College, I'm learning and growing every day.<br> The college has provided
+            me with a great platform to explore my interests and develop my skills. I'm enjoying my time here and 
+            looking forward to making the most of my college life.Salayan, my hometown, is a beautiful place that 
+            holds a special place in my heart.
+        </p>
+        </div>
+        <div class="social-links">
+        <a href="#"><img src="email.png" alt="YouTube"></a>
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="Instagram.png" alt="instagram"></a>
+        <a href="#"><img src="whatsapp.png" alt="Email"></a>
+        </div>
+    </div>
+    <section class="slider-container">
+    <h2>Inspiring Quotes</h2>
+    <div class="slider">
+        <div class="slide active">
+            <img src="dsb.jpg" alt="Image 1" class="slide-image">
+            <p class="quote">"If you're changing the world, you're working on important things. You're excited to get up in the morning."</p>
+            <p class="author">by Larry Page</p>
+        </div>
+        <div class="slide">
+            <img src="dk1.jpeg" alt="Image 2" class="slide-image">
+            <p class="quote">"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful."</p>
+            <p class="author">by Albert Schweitzer</p>
+        </div>
+        <div class="slide">
+            <img src="dsb.jpg" alt="Image 3" class="slide-image">
+            <p class="quote">"Innovation distinguishes between a leader and a follower."</p>
+            <p class="author">by Steve Jobs</p>
+        </div>
+    </div>
+    <!-- Navigation Arrows -->
+    <button class="arrow left" onclick="prevSlide()">&#8249;</button>
+    <button class="arrow right" onclick="nextSlide()">&#8250;</button>
+    <!-- Dots -->
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+    </section>
+    <script src="slide.js"></script>
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>Let’s work Together</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+            </p>
+        <div class="contact-list">
+            <li><i class='bx bxs-send'></i>dk1153672@gmail.com</li><br>
+            <li><i class='bx bx-phone-call'></i>+977-9825133713</li>
+        </div>
+        <div class="contact-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>  <!-- Change fab to fa-brands -->
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+        <div class="contact-form">
+            <form action="">
+                <input type="text" placeholder="Enter Your Name" required>
+                <input type="email" placeholder="Enter Your Email" required>
+                <input type="text" placeholder="Enter Your Subject">
+                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="submit" value="submit" class="send">
+            </form>
+        </div>
+    </section>
+    <!-- html code for footer -->
+<div class="footer">
+<div class="footer-container">
+    <div class="footer-section">
+        <h3>Colorlib</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quasi perferendis ratione.</p>
+    </div>
+    <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Journal</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Legal</h3>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Partners</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <a href="#" class="contact-btn">Contact Us</a>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2019-2020 All Rights Reserved.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
